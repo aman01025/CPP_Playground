@@ -1,0 +1,1 @@
+Calling of a function calling itself is called Recursion. Most common exaple would be factorial. 
