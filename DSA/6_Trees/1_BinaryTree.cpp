@@ -8,7 +8,7 @@ class Node
     Node *right;
     Node()
     {
-        left = NULL;
+        left = NULL; 
         right = NULL;
     }
 };
