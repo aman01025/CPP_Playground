@@ -37,9 +37,34 @@ bool isBST(Node *root)
     }
 }
 
+Node* inOrderPred(Node * node)
+{
+
+}
+
 void deleteNode(Node* root, int n)
 {
-    Node *prev = nullptr;
+    Node *iPre = nullptr;
+    if(root == nullptr)
+    {
+        return;
+    }
+    if(root->data == n && root->left == nullptr && root->right == nullptr)
+    {
+        delete root;
+    }
+    if(root->data < n)
+    {
+        deleteNode(root->right, n);
+    }
+    else if(root->data > n)
+    {
+        deleteNode(root->right, n);   
+    }
+    else
+    {
+        iPre = inOrderPred(root);
+    }
     while(root!=nullptr)
     {
         if(root->data == n)
@@ -49,12 +74,15 @@ void deleteNode(Node* root, int n)
                 if(n < prev->data)
                 {
                     prev->left = nullptr;
+                    delete root;
                 }
                 else
                 {
                     prev->right = nullptr;
+                    delete root;
                 }
             }
+            
         }
         else if(root->data < n)
         {

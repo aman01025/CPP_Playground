@@ -89,4 +89,9 @@ How many queens can you placed on an n*n chess board such that they don't kill e
 
 
 
+Apart from the concept of memorization, there is another type of DP called tabularization. This can replace the recursion. Refer to the program 5_robbingHouses.cpp
+Problem statement:-
+A professional robber is planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
+
 
